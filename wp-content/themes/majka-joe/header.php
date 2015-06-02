@@ -56,7 +56,7 @@
                         Phone: 
                     <?php endif; ?>
                         <span itemprop="telephone"><strong><?php echo $phone_current; ?></strong></span>
-                    <?php if (!empty($phone_new)) : ?><br/>
+                    <?php if (!empty($phone_new)) : ?><br/> 
                         New Patients: <span itemprop="telephone"><strong><?php echo $phone_new; ?></strong></span><br/>
                     <?php endif; ?>
                 </div>

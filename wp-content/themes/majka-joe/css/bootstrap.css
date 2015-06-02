@@ -3432,7 +3432,7 @@ input[type="button"].btn-block {
 /* line 177, bootstrap/_styles.scss */
 .testimonial-bar {
   padding: 20px 0px 10px 0px;
-  background: #e2e2e2;
+  background: #675267;
 }
 
 /* line 182, bootstrap/_styles.scss */
@@ -3696,53 +3696,59 @@ input[type="button"].btn-block {
 
 /* line 410, bootstrap/_styles.scss */
 .callout-body {
+  padding: 20px 0;
+  color: #fff;
   text-align: center;
-  font-size: 15px;
+  font-size: 28px;
   font-family: "nimbus-sans-condensed", sans-serif;
+}
+/* line 416, bootstrap/_styles.scss */
+.callout-body span {
+  padding-top: 10px;
 }
 
 /* Services Pages */
-/* line 418, bootstrap/_styles.scss */
+/* line 423, bootstrap/_styles.scss */
 .services-tabs {
   margin-top: 30px;
 }
 
 /* Bootstrap Dropdown Fix */
-/* line 423, bootstrap/_styles.scss */
+/* line 428, bootstrap/_styles.scss */
 ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;
 }
 
-/* line 426, bootstrap/_styles.scss */
+/* line 431, bootstrap/_styles.scss */
 .navbar .dropdown-menu {
   margin-top: 0px;
 }
 
 /* Team PAge */
-/* line 433, bootstrap/_styles.scss */
+/* line 438, bootstrap/_styles.scss */
 .team-row {
   margin-bottom: 20px;
 }
 
-/* line 437, bootstrap/_styles.scss */
+/* line 442, bootstrap/_styles.scss */
 .team-box {
   border: 1px solid #8D8881;
 }
 
-/* line 441, bootstrap/_styles.scss */
+/* line 446, bootstrap/_styles.scss */
 .team-name {
   position: absolute;
   bottom: 0px;
   left: 30px;
 }
 
-/* line 447, bootstrap/_styles.scss */
+/* line 452, bootstrap/_styles.scss */
 .modal-thumb {
   float: left;
   margin-right: 20px;
 }
 
-/* line 452, bootstrap/_styles.scss */
+/* line 457, bootstrap/_styles.scss */
 .bx-wrapper .bx-pager {
   position: absolute;
   top: -10px !important;
@@ -3750,7 +3756,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   width: auto !important;
 }
 
-/* line 459, bootstrap/_styles.scss */
+/* line 464, bootstrap/_styles.scss */
 #bx-pager {
   width: 100%;
   text-align: center;
@@ -3758,48 +3764,48 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background: #f9f9f9;
   padding: 10px 0px 10px 0px;
 }
-/* line 466, bootstrap/_styles.scss */
+/* line 471, bootstrap/_styles.scss */
 #bx-pager a img {
   border: 1px solid #8D8881;
   margin-left: 5px;
 }
-/* line 471, bootstrap/_styles.scss */
+/* line 476, bootstrap/_styles.scss */
 #bx-pager a .active img {
   border: 1px solid #428BCA;
 }
 
-/* line 478, bootstrap/_styles.scss */
+/* line 483, bootstrap/_styles.scss */
 .item img {
   border: 1px solid #8D8881 !important;
 }
 
-/* line 482, bootstrap/_styles.scss */
+/* line 487, bootstrap/_styles.scss */
 .pager-instructions {
   font-size: 12px;
   color: #8D8881;
   text-align: center;
 }
 
-/* line 489, bootstrap/_styles.scss */
+/* line 494, bootstrap/_styles.scss */
 .maps-box {
   width: 100%;
   overflow: hidden;
 }
-/* line 492, bootstrap/_styles.scss */
+/* line 497, bootstrap/_styles.scss */
 .maps-box img {
   position: relative;
   left: 50%;
   margin-left: -960px;
 }
 
-/* line 499, bootstrap/_styles.scss */
+/* line 504, bootstrap/_styles.scss */
 .maps-box-narrow {
   margin-top: 20px;
   width: 100%;
   overflow: hidden;
   border: 1px solid #000;
 }
-/* line 504, bootstrap/_styles.scss */
+/* line 509, bootstrap/_styles.scss */
 .maps-box-narrow img {
   position: relative;
   left: 50%;
@@ -3807,7 +3813,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 /* Testimonial 2 Page */
-/* line 513, bootstrap/_styles.scss */
+/* line 518, bootstrap/_styles.scss */
 .speech-bubble {
   background: #d8e7f0;
   border-bottom-right-radius: 10px;
@@ -3819,7 +3825,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   position: relative;
 }
 
-/* line 522, bootstrap/_styles.scss */
+/* line 527, bootstrap/_styles.scss */
 .speech-bubble-triangle {
   width: 1px;
   height: 1px;
@@ -3832,7 +3838,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   right: 20px;
 }
 
-/* line 535, bootstrap/_styles.scss */
+/* line 540, bootstrap/_styles.scss */
 .affix {
   top: 0px;
   width: 100%;
@@ -3843,12 +3849,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 /* No media query since this is the default in Bootstrap */
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 992px) {
-  /* line 548, bootstrap/_styles.scss */
+  /* line 553, bootstrap/_styles.scss */
   .navbar .caret {
     display: none;
   }
 
-  /* line 554, bootstrap/_styles.scss */
+  /* line 559, bootstrap/_styles.scss */
   .navbar .dropdown-menu {
     display: inline-block;
     position: relative;
@@ -3858,12 +3864,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     border: none;
     margin-left: 30px;
   }
-  /* line 564, bootstrap/_styles.scss */
+  /* line 569, bootstrap/_styles.scss */
   .navbar .dropdown-menu li a:before {
     content: '-';
   }
 
-  /* line 572, bootstrap/_styles.scss */
+  /* line 577, bootstrap/_styles.scss */
   .affix {
     position: relative !important;
   }

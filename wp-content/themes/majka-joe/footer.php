@@ -9,14 +9,8 @@
               $numPerRow = 3;
           ?>
           <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-              <?php echo '<div class="col-lg-'.(12/$numPerRow).'">'; ?>
-              	<?php $callout_link = get_field('callout_link_url'); ?>
-                <?php if ( has_post_thumbnail() ) { ?>
-                		<?php if(!empty($callout_link)) { echo '<a href="'.$callout_link.'">'; } ?>
-						<?php echo get_the_post_thumbnail($post->ID,'full', array('class'=>'img-responsive img-thumbnail')); ?>
-                        <?php if(!empty($callout_link)) { echo '</a>'; } ?>
-                <?php } else { ?>
-                	<div class="callout-title">
+              <?php echo '<div class="col-sm-12">'; ?>
+                	<!-- <div class="callout-title">
                     	<?php if(!empty($callout_link)) : ?>
                         	<a href="<?php echo $callout_link; ?>">
                        	<?php endif; ?>
@@ -24,7 +18,7 @@
                         <?php if(!empty($callout_link)) : ?>
                         	</a>
                        	<?php endif; ?>
-                    </div>
+                    </div> -->
                 	<div class="callout-body"><?php the_content(); ?></div>
                     	<?php
 							if(!empty($callout_link)) {
@@ -34,7 +28,6 @@
 								  echo '</a>';
 							}
 						?>
-                <?php } ?>
                 
               <?php echo '</div>'; ?> 
               <?php if($i % $numPerRow == 0) {echo '</div><div class="row testimonial-row">';} ?>

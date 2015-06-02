@@ -176,7 +176,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
 .testimonial-bar {
   padding: 20px 0px 10px 0px;
-  background: #e2e2e2;  
+  background: #675267; 
 }
 
 .testimonial-text {
@@ -408,9 +408,14 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
 .callout-body {
+  padding: 20px 0 ;
+  color: #fff;
   text-align: center;
-  font-size: 15px;
+  font-size: 28px;
   font-family: $font-family-base;
+  span {
+    padding-top: 10px;
+  }
 }
 
 /* Services Pages */
