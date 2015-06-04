@@ -5,14 +5,17 @@
 
 // Dropdown arrow/caret
 .caret {
-  display: inline-block;
+  display: none;
   width: 0;
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top:   $caret-width-base solid;
+  border-top:   $caret-width-base solid #6B7E62;
   border-right: $caret-width-base solid transparent;
   border-left:  $caret-width-base solid transparent;
+  position: absolute;
+  margin-top: 12px;
+  z-index: 1032;
 }
 
 // The dropdown wrapper (div)
@@ -72,6 +75,7 @@
 
 // Hover/Focus state
 .dropdown-menu > li > a {
+    border-bottom: 8px solid transparent;
   &:hover,
   &:focus {
     text-decoration: none;
@@ -89,6 +93,7 @@
     text-decoration: none;
     outline: 0;
     background-color: $dropdown-link-active-bg;
+    border-bottom: 8px solid #5A2049;
   }
 }
 

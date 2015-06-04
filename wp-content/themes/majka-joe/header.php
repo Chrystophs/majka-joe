@@ -45,7 +45,7 @@
 <header role="banner">
 <div class="container">
 	<div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4 h-phone">
+                <div class="col-sm-12 col-md-12 col-lg-4 h-phone">
                     <?php
                         $phone_new = contact_detail('phone_new', '' , '', false);
                         $phone_current = contact_detail('phone_current', '' , '', false);
@@ -60,7 +60,7 @@
                         New Patients: <span itemprop="telephone"><strong><?php echo $phone_new; ?></strong></span><br/>
                     <?php endif; ?>
                 </div>
-            <div class="col-sm-6 col-md-6 col-lg-4">
+            <div class="col-sm-12 col-md-12 col-lg-4">
                 <?php $logo_header = of_get_option('logo_header');
 				  if ($logo_header) { ?>
 				   <a class="main-logo" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>">
@@ -72,7 +72,7 @@
 					</a>
 				<?php } ?>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-4">
+            <div class="col-sm-12 col-md-12 col-lg-4">
             	<div class="social-links">
 					<?php get_template_part( 'partials/svg','declaration'); ?>
                 </div>

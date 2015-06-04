@@ -5,7 +5,7 @@
 get_header(); ?>
 
 <div class="maps-box">
-		<a href="<?php if (function_exists('contact_detail')) { contact_detail('google_maps'); } ?>" target="_blank"  itemprop=”maps”><img src="<?php bloginfo('template_url'); ?>/i/map.jpg" alt="google-maps" class=""/></a>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5977.359689505097!2d-87.04571705577662!3d41.489540112545434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881199f3e9e1f8e9%3A0x718585bf56998602!2sJoseph+Majka%2C+DDS!5e0!3m2!1sen!2sus!4v1433447103884" width="100%" height="500" frameborder="0" style="border:0"></iframe>
 </div>
 <div class="body-bg">
     <div class="container" id="b-container">

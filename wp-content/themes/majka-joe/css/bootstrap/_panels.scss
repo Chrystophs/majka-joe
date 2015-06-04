@@ -33,8 +33,11 @@
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: ceil(($font-size-base * 1.125));
-  color: inherit;
+  font-size: 36px;
+  color: #6b7e62;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 
   > a {
     color: inherit;

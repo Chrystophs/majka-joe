@@ -8,7 +8,7 @@
   margin-top: 10%;
   text-align: center;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 36px;
 }
 .box-size1 {
   height: auto;
@@ -21,7 +21,7 @@
   }
 }
 .box-content {
-  font-size:20px;
+  font-size:24px;
   padding-bottom: 25px;
 }
 .box-size2 {
@@ -55,6 +55,19 @@
   font-size: 50px;
   text-transform: uppercase;
   color:#8F7390;
+}
+.service-title {
+  padding-top: 20px;
+  text-align: center;
+  font-family: "nimbus-sans-condensed", sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #C58A5E;
+}
+.service-h2 {
+  padding-top: 15px;
+  font-size: 32px;
+  font-family: "minion-pro", georgia;
 }
 .page-content {
   text-align: center;
@@ -153,11 +166,36 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
 /* Page Styles */
 
+.box-size-service {
+  height: auto;
+  background: #5a2049;
+  padding: 0 !important;
+  img {
+    margin-top: -100px;
+    width: 100%;
+    height: auto;
+    overflow-y:hidden;
+  }
+}
+
+@media(max-width: 992px) {
+  .box-size-service {
+  height: auto;
+  background: #5a2049;
+  padding: 0 !important;
+  img {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    overflow-y:hidden;
+  }
+}
+
+}
+
 .services-box {
   position: relative;
-  top: -50px;
-  padding-top: 150px;
-  padding-bottom: 20px;
+  padding-top: 100px;
   background: #5a2049;
   text-align: center;
   color: #fff;
@@ -168,7 +206,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   height: auto;
   width: 100%;
   background-size: 100% 150%;
-  background-position-y: -225px;
+  background-position-y: -200px;
   overflow-y:hidden;
 }
 
@@ -179,7 +217,6 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   display: inline-block;
   position: relative;
   top: -35px;
-
 }
 .majka-quote {
   border-left: 1px solid #fff;
@@ -189,6 +226,15 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   color: #fff;
   margin: 16% 20px;
   padding-left: 20px;
+}
+@media (max-width: 1348px) {
+  .circle {
+    top:35px;
+    margin-left: 35px;
+  }
+  .majka-quote {
+    margin-left: 35px;
+  }
 }
 .majka-right {
   color: #fff;
@@ -213,6 +259,16 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   margin: 20px auto;
   text-align: center;
 }
+
+.down-arrow3 {
+  background-image: url(../i/down-arrow.png);
+  background-size: 25px 25px;
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 #breadcrumbs {
   color: #8D8881;
   margin: 10px 0px 10px 0px;
@@ -235,6 +291,14 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   background-color: #ffffff;
   .container {
     background: #fff;
+  }
+}
+
+.purple-bg {
+  margin-top: -50px;
+  background: #5a2049;
+  .container {
+  background: #5a2049;
   }
 }
 
@@ -280,6 +344,8 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   color: #fff;
   text-align: center;
   font-size: 28px;
+  margin-left: -15px;
+  margin-right: -15px;
   span {
     line-height: 2;
     font-size: 30px;
@@ -320,6 +386,11 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
 /* Header Styles */
+.main-logo {
+  img {
+    margin: 0 auto;
+  }
+}
 .head-img {
   img{
   width: 100%;
@@ -328,6 +399,13 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   position: relative;
   top: -50px;
 }
+}
+@media (max-width: 992px) {
+  .head-img{
+    img {
+      top:0px;
+    }
+  }
 }
 #triangle-down2 {
   width: 0;
@@ -376,6 +454,11 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     }
   }
 }
+@media (max-width: 1200px) {
+  .social-links {
+    text-align: center;
+  }
+}
 
 .social-links-bottom {
   text-align: center;
@@ -414,7 +497,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
 .h-phone {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 23px;
   margin-top: 20px;
   text-align: left;
   font-family:"nimbus-sans-condensed",sans-serif;
@@ -428,6 +511,11 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
       color:$gray;
       font-weight: 100;
     }
+  }
+}
+@media (max-width: 1200px) {
+  .h-phone {
+    text-align: center;
   }
 }
 
@@ -496,6 +584,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     font-size: 24px;
     color:#fff;
     letter-spacing: -.5px;
+    margin: 0 -15px;
   }
 }
 
@@ -579,6 +668,14 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
 /* Services Pages */
 
+.service-divider {
+  display: block;
+  text-align: center;
+  height: 5px;
+  width: 100px;
+  margin: 10px auto 20px;
+  border-bottom: 2px solid #8D562C 
+}
 .services-tabs {
   margin-top: 30px;
 }
@@ -653,6 +750,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 .maps-box {
   width: 100%;
   overflow: hidden;
+  margin-top: -50px;
   img {
     position: relative;
     left: 50%;

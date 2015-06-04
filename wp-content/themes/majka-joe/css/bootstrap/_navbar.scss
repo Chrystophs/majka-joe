@@ -194,11 +194,11 @@
   &:focus {
     outline: none;
     color: $navbar-default-toggle-hover-color;
-    border-bottom: 5px solid rgb(72, 18, 59);
+    border-bottom: 5px solid #5A2049;
   }
   &:hover {
     color: $navbar-default-toggle-hover-color;
-    border-bottom: 5px solid rgb(72, 18, 59);
+    border-bottom: 5px solid #5A2049;
   }
 
   // Bars
@@ -233,7 +233,10 @@
     border-bottom: 8px solid transparent;
   }
   :hover {
-    border-bottom: 8px solid rgb(72, 18, 59);
+    border-bottom: 8px solid #5A2049;
+        .caret {
+          display: block;
+        }
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -427,6 +430,10 @@
       &:focus {
         color: $navbar-default-link-active-color;
         background-color: $navbar-default-link-active-bg;
+        border-bottom: 8px solid #5A2049;
+        .caret {
+          display: block;
+        }
       }
     }
     > .disabled > a {
@@ -464,6 +471,9 @@
       &:focus {
         background-color: $navbar-default-link-active-bg;
         color: $navbar-default-link-active-color;
+        .caret {
+          display: block;
+        }
       }
     }
 
@@ -510,6 +520,12 @@
     }
   }
 
+}
+
+@media (max-width: 992px) {
+  .navbar-default {
+  background-color: rgba(141, 86, 44, 1);
+}
 }
 
 // Inverse navbar

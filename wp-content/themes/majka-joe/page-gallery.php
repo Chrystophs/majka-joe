@@ -8,7 +8,37 @@ get_header(); ?>
     		<div class="row">
             	<div class="col-xs-12">
                 	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
-                </div>
+                </div><?php 
+                                  $args = array( 'post_type' => 'gallery', 'order' => 'ASC' );
+                                  $loop = new WP_Query( $args ); 
+                              ?>
+                            <section>
+                              <div id="owl-smile" class="owl-carousel owl-carousel-majka owl-theme">
+                                  <?php $cnt2 = 0; ?>
+                                  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                      <div>
+                                        <?php
+                                            $children = get_children( 'post_type=attachment&post_mime_type=image&output=ARRAY_N&orderby=menu_order&order=DESC&posts_per_page=-1&post_parent='.$post->ID);
+                                            $num_children = count($children);
+                                            if ($num_children == 1) {
+                                                $num_children = 1;
+                                            } else if ($num_children % 3 == 0) {
+                                                $num_children = 3;
+                                            } elseif ($num_children % 2 == 0) {
+                                                $num_children = 2;
+                                            } else {
+                                                $num_children = 2;
+                                            } 
+                                        ?>
+                                        <?php echo do_shortcode('[gpm-gallery numperrow="'.$num_children.'" imgthumb="full"]'); ?>
+                                        <h3><?php the_title(); ?></h3> 
+                                        <?php the_content(); ?>
+                                      </div>
+                                      <?php $cnt2++; ?>
+                                   <?php endwhile; ?>
+                                   <?php wp_reset_query(); ?>     
+                              </div>
+                           </section>
             </div>
           <div class="row">
             <div class="col-xs-12">
@@ -39,37 +69,7 @@ get_header(); ?>
                               <?php endif; ?>
                               <?php wp_reset_query(); ?>
                               
-                              <?php 
-                                  $args = array( 'post_type' => 'gallery', 'order' => 'ASC' );
-                                  $loop = new WP_Query( $args ); 
-                              ?>
-                            <section>
-                              <div id="owl-smile" class="owl-carousel owl-carousel-narrow owl-theme">
-                                  <?php $cnt2 = 0; ?>
-                                  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                      <div>
-                                        <?php
-                                            $children = get_children( 'post_type=attachment&post_mime_type=image&output=ARRAY_N&orderby=menu_order&order=DESC&posts_per_page=-1&post_parent='.$post->ID);
-                                            $num_children = count($children);
-                                            if ($num_children == 1) {
-                                                $num_children = 1;
-                                            } else if ($num_children % 3 == 0) {
-                                                $num_children = 3;
-                                            } elseif ($num_children % 2 == 0) {
-                                                $num_children = 2;
-                                            } else {
-                                                $num_children = 2;
-                                            }	
-                                        ?>
-                                        <?php echo do_shortcode('[gpm-gallery numperrow="'.$num_children.'" imgthumb="full"]'); ?>
-                                        <h3><?php the_title(); ?></h3> 
-                                        <?php the_content(); ?>
-                                      </div>
-                                      <?php $cnt2++; ?>
-                                   <?php endwhile; ?>
-                                   <?php wp_reset_query(); ?>     
-                              </div>
-                           </section>
+                              
                    		</article>
                 </div>			
             </div>

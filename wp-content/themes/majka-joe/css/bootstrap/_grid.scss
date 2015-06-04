@@ -20,7 +20,15 @@
     width: $container-lg;
   }
 }
-
+.new-container {
+  margin: 20px 13%;
+  text-align: center;
+}
+@media(max-width: 992px) {
+  .new-container {
+    margin: 20px 10%;
+  }
+}
 
 // Fluid container
 //
@@ -38,6 +46,8 @@
 
 .row {
   @include make-row();
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 

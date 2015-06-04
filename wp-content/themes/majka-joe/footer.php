@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <address>
-                        <div class="foot-h2">Phone:<br/><span>
+                        <div class="foot-h2">Phone<br/><span>
                             <?php if (!empty($phone_new)) : ?>
                                 New Patients: <?php echo $phone_new; ?></strong><br/>
                             <?php endif; ?>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-xs-12">
                     <div class="social-links social-links-bottom">
-                            <?php get_template_part( 'partials/svg','declaration'); ?>
+                            <?php get_template_part( 'partials/svg','declaration2'); ?>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
