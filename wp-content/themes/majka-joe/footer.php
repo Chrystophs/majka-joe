@@ -1,45 +1,28 @@
-<?php if (of_get_option('disable_footer_callouts') != 1) : ?> 
-<div class="testimonial-bar visible-lg">
-    <div class="container">
-      <div class="row">
-          <?php 
-              $args = array( 'post_type' => 'callouts', 'posts_per_page' => 4, 'order' => 'ASC', 'orderby' => 'menu_order' );
-              $loop = new WP_Query( $args ); 
-              $i = 1;
-              $numPerRow = 3;
-          ?>
-          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-              <?php echo '<div class="col-sm-12">'; ?>
-                	<!-- <div class="callout-title">
-                    	<?php if(!empty($callout_link)) : ?>
-                        	<a href="<?php echo $callout_link; ?>">
-                       	<?php endif; ?>
-							<?php the_title(); ?>
-                        <?php if(!empty($callout_link)) : ?>
-                        	</a>
-                       	<?php endif; ?>
-                    </div> -->
-                	<div class="callout-body"><?php the_content(); ?></div>
-                    	<?php
-							if(!empty($callout_link)) {
-								  echo '<a class="btn-square btn-callout btn-default btn-block" href="'.$callout_link.'">';
-								  	$callout_text = get_field('callout_link_text');
-								  	if(!empty($callout_text)) { echo $callout_text; } else { echo 'Learn More'; }
-								  echo '</a>';
-							}
-						?>
-                
-              <?php echo '</div>'; ?> 
-              <?php if($i % $numPerRow == 0) {echo '</div><div class="row testimonial-row">';} ?>
-                <?php $i++; ?> 
-           <?php endwhile; wp_reset_query();?>
-      </div>
-    </div>
-</div>
-<?php endif; ?>
 <footer>
     <div class="footer-bar">
         <div class="container">   
+            <div class="row promo-row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="free">free
+                    </div>
+                    <div class="promo-text">
+                    EXAM AND X-RAYS<br/>
+                    FOR NEW PATIENTS<br/>
+                    <span>A $195 VALUE</span>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="plus-div"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="free">free
+                    </div>
+                    <div class="promo-text">
+                    IMPLANT CONSULTATION<br/>
+                    <span>$500 OFF TREATMENT</span>
+                    </div>
+                </div>
+            </div>
             <div class="row">
             	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <?php 

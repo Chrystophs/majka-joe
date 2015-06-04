@@ -472,10 +472,11 @@ hr {
   margin-top: 34px;
   margin-bottom: 34px;
   border: 0;
+  width: 150px;
   border-top: 1px solid #eeeeee;
 }
 
-/* line 129, bootstrap/_scaffolding.scss */
+/* line 130, bootstrap/_scaffolding.scss */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -3236,7 +3237,67 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
-/* line 8, bootstrap/_styles.scss */
+/* line 7, bootstrap/_styles.scss */
+.box-title {
+  margin-top: 10%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+/* line 13, bootstrap/_styles.scss */
+.box-size1 {
+  height: auto;
+  background: #5a2049;
+  padding: 0 !important;
+}
+/* line 17, bootstrap/_styles.scss */
+.box-size1 img {
+  width: 100%;
+  height: auto;
+  overflow-y: hidden;
+}
+
+/* line 23, bootstrap/_styles.scss */
+.box-content {
+  font-size: 20px;
+  padding-bottom: 25px;
+}
+
+/* line 27, bootstrap/_styles.scss */
+.box-size2 {
+  height: auto;
+  background: #6b7e62;
+  padding: 0 !important;
+}
+/* line 31, bootstrap/_styles.scss */
+.box-size2 img {
+  height: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+/* line 37, bootstrap/_styles.scss */
+.first-box {
+  background: #5a2049;
+  text-align: center;
+  color: #fff;
+}
+
+/* line 42, bootstrap/_styles.scss */
+.home-left {
+  background-image: url(../i/home-second.jpg) no-repeat;
+  background-size: 1200px 500px;
+}
+
+/* line 46, bootstrap/_styles.scss */
+.second-box {
+  background: #6b7e62;
+  text-align: center;
+  color: #fff;
+}
+
+/* line 52, bootstrap/_styles.scss */
 .page-title {
   text-align: center;
   font-family: "nimbus-sans-condensed", sans-serif;
@@ -3245,18 +3306,18 @@ input[type="button"].btn-block {
   color: #8F7390;
 }
 
-/* line 15, bootstrap/_styles.scss */
+/* line 59, bootstrap/_styles.scss */
 .page-content {
   text-align: center;
 }
 
-/* line 19, bootstrap/_styles.scss */
+/* line 63, bootstrap/_styles.scss */
 .login {
   background: #e7e7e7;
 }
 
 /* Blog */
-/* line 25, bootstrap/_styles.scss */
+/* line 69, bootstrap/_styles.scss */
 .alignleft, .alignright {
   padding: 5px;
   background: #fff;
@@ -3265,53 +3326,53 @@ input[type="button"].btn-block {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* line 33, bootstrap/_styles.scss */
+/* line 77, bootstrap/_styles.scss */
 .alignleft {
   float: left;
   margin: 0 20px 20px 0;
 }
 
-/* line 34, bootstrap/_styles.scss */
+/* line 78, bootstrap/_styles.scss */
 .alignright {
   float: right;
   margin: 0 0 20px 20px;
 }
 
-/* line 36, bootstrap/_styles.scss */
+/* line 80, bootstrap/_styles.scss */
 .margin-left {
   margin-left: 20px;
   margin-bottom: 20px;
   margin-top: 5px;
 }
 
-/* line 42, bootstrap/_styles.scss */
+/* line 86, bootstrap/_styles.scss */
 .margin-right {
   margin-right: 20px;
   margin-bottom: 20px;
   margin-top: 5px;
 }
 
-/* line 48, bootstrap/_styles.scss */
+/* line 92, bootstrap/_styles.scss */
 #bsidebar {
   list-style-type: none;
   margin-top: 20px;
   padding: 0px;
 }
-/* line 53, bootstrap/_styles.scss */
+/* line 97, bootstrap/_styles.scss */
 #bsidebar .panel-body ul {
   padding: 0px 0px 0px 15px;
 }
 
-/* line 59, bootstrap/_styles.scss */
+/* line 103, bootstrap/_styles.scss */
 .search-row {
   margin-bottom: 20px;
 }
-/* line 61, bootstrap/_styles.scss */
+/* line 105, bootstrap/_styles.scss */
 .search-row .col-xs-9 {
   padding-right: 0px;
 }
 
-/* line 68, bootstrap/_styles.scss */
+/* line 112, bootstrap/_styles.scss */
 .blog-title a {
   font-size: 24px;
   color: #428bca;
@@ -3319,104 +3380,174 @@ input[type="button"].btn-block {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 76, bootstrap/_styles.scss */
+/* line 120, bootstrap/_styles.scss */
 .upper-meta {
   margin-bottom: 15px;
 }
 
-/* line 80, bootstrap/_styles.scss */
+/* line 124, bootstrap/_styles.scss */
 .single-title {
   font-size: 30px;
 }
 
 /* Custom Widgets */
-/* line 86, bootstrap/_styles.scss */
+/* line 130, bootstrap/_styles.scss */
 .custom-widget {
   margin-bottom: 20px;
 }
-/* line 92, bootstrap/_styles.scss */
+/* line 136, bootstrap/_styles.scss */
 .custom-widget .current_page_item a, .custom-widget .current_page_item a:hover, .custom-widget .current_page_item a:focus {
   color: white;
   background-color: #428bca;
 }
 
 /* Slide Show Styles */
-/* line 102, bootstrap/_styles.scss */
+/* line 146, bootstrap/_styles.scss */
 .slide-container {
   padding-top: 20px;
 }
 
-/* line 106, bootstrap/_styles.scss */
+/* line 150, bootstrap/_styles.scss */
 .slide-wrapper {
   border: 1px solid #000000;
 }
 
 /* Page Styles */
-/* line 112, bootstrap/_styles.scss */
+/* line 156, bootstrap/_styles.scss */
+.services-box {
+  position: relative;
+  top: -50px;
+  padding-top: 150px;
+  padding-bottom: 20px;
+  background: #5a2049;
+  text-align: center;
+  color: #fff;
+}
+
+/* line 166, bootstrap/_styles.scss */
+.dr-majka {
+  background: url(../i/dr-majka-bg.jpg) no-repeat;
+  height: auto;
+  width: 100%;
+  background-size: 100% 150%;
+  background-position-y: -225px;
+  overflow-y: hidden;
+}
+
+/* line 175, bootstrap/_styles.scss */
+.circle {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  display: inline-block;
+  position: relative;
+  top: -35px;
+}
+
+/* line 184, bootstrap/_styles.scss */
+.majka-quote {
+  border-left: 1px solid #fff;
+  width: 300px;
+  height: 150px;
+  display: inline-block;
+  color: #fff;
+  margin: 16% 20px;
+  padding-left: 20px;
+}
+
+/* line 193, bootstrap/_styles.scss */
+.majka-right {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 10% auto;
+  padding: 0 10%;
+}
+
+/* line 200, bootstrap/_styles.scss */
+.down-arrow {
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* line 207, bootstrap/_styles.scss */
+.down-arrow2 {
+  background-image: url(../i/down-arrow.png);
+  background-size: 25px 25px;
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* line 216, bootstrap/_styles.scss */
 #breadcrumbs {
   color: #8D8881;
   margin: 10px 0px 10px 0px;
 }
 
-/* line 117, bootstrap/_styles.scss */
+/* line 221, bootstrap/_styles.scss */
 .page-thumbnail {
   float: left;
   margin-right: 20px;
 }
 
-/* line 122, bootstrap/_styles.scss */
+/* line 226, bootstrap/_styles.scss */
 .content-block {
   margin-bottom: 50px;
   padding-top: 20px;
 }
-/* line 125, bootstrap/_styles.scss */
+/* line 229, bootstrap/_styles.scss */
 .content-block h1 {
   margin-top: 0px;
 }
 
-/* line 130, bootstrap/_styles.scss */
+/* line 234, bootstrap/_styles.scss */
 .body-bg {
   background-color: #ffffff;
-  padding-bottom: 20px;
 }
-/* line 133, bootstrap/_styles.scss */
+/* line 236, bootstrap/_styles.scss */
 .body-bg .container {
   background: #fff;
 }
 
-/* line 138, bootstrap/_styles.scss */
+/* line 241, bootstrap/_styles.scss */
 .upper-meta-side {
   color: #888888;
   margin-bottom: 20px;
 }
 
-/* line 143, bootstrap/_styles.scss */
+/* line 246, bootstrap/_styles.scss */
 .blog-roll-title {
   font-size: 24px;
 }
 
 /* Contact Page */
-/* line 149, bootstrap/_styles.scss */
+/* line 252, bootstrap/_styles.scss */
 .contact-headline {
   margin: 20px 0px 20px 0px;
   text-align: right;
 }
 
-/* line 154, bootstrap/_styles.scss */
+/* line 257, bootstrap/_styles.scss */
 .contact-name {
   font-size: 22px;
   line-height: 22px;
   margin: 10px 0px 0px 0px;
 }
 
-/* line 160, bootstrap/_styles.scss */
+/* line 263, bootstrap/_styles.scss */
 .contact-subname {
   font-size: 18px;
   line-height: 18px;
   margin: 5px 0px 10px 0px;
 }
 
-/* line 166, bootstrap/_styles.scss */
+/* line 269, bootstrap/_styles.scss */
 .contact-hours {
   font-size: 18px;
   line-height: 18px;
@@ -3424,18 +3555,39 @@ input[type="button"].btn-block {
 }
 
 /*Testimonials Page Styles */
-/* line 173, bootstrap/_styles.scss */
+/* line 277, bootstrap/_styles.scss */
+.callout {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+}
+/* line 283, bootstrap/_styles.scss */
+.callout span {
+  line-height: 2;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+/* line 290, bootstrap/_styles.scss */
 .testimonial-row {
   margin-top: 10px;
 }
 
-/* line 177, bootstrap/_styles.scss */
+/* line 294, bootstrap/_styles.scss */
 .testimonial-bar {
   padding: 20px 0px 10px 0px;
   background: #675267;
 }
 
-/* line 182, bootstrap/_styles.scss */
+/* line 298, bootstrap/_styles.scss */
+.testimonial-bar2 {
+  padding: 20px 0px 10px 0px;
+  background: #5D765D;
+}
+
+/* line 303, bootstrap/_styles.scss */
 .testimonial-text {
   position: absolute;
   top: 0px;
@@ -3443,7 +3595,7 @@ input[type="button"].btn-block {
   padding: 0px;
   opacity: 0.0;
 }
-/* line 188, bootstrap/_styles.scss */
+/* line 309, bootstrap/_styles.scss */
 .testimonial-text:hover {
   position: absolute;
   top: 0px;
@@ -3460,7 +3612,7 @@ input[type="button"].btn-block {
 }
 
 /* Header Styles */
-/* line 203, bootstrap/_styles.scss */
+/* line 324, bootstrap/_styles.scss */
 .head-img img {
   width: 100%;
   height: auto;
@@ -3469,19 +3621,30 @@ input[type="button"].btn-block {
   top: -50px;
 }
 
-/* line 211, bootstrap/_styles.scss */
-.triangle-down {
-  width: 110%;
-  margin-top: 20px;
-  height: 200px;
-  left: -5%;
-  background: url(../i/triangle-bg.png) no-repeat;
-  background-size: 100% auto;
+/* line 332, bootstrap/_styles.scss */
+#triangle-down2 {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
   z-index: 1;
   position: absolute;
 }
 
-/* line 221, bootstrap/_styles.scss */
+/* line 341, bootstrap/_styles.scss */
+.triangle-down {
+  width: 105%;
+  margin-top: 20px;
+  height: 200px;
+  left: -5%;
+  background: url(../i/triangle-bg.png) no-repeat;
+  background-size: 105% auto;
+  z-index: 1;
+  position: absolute;
+}
+
+/* line 351, bootstrap/_styles.scss */
 .top-bar {
   background: #432712;
   margin-bottom: 10px;
@@ -3489,46 +3652,46 @@ input[type="button"].btn-block {
   padding: 3px 0px 5px 0px;
 }
 
-/* line 228, bootstrap/_styles.scss */
+/* line 358, bootstrap/_styles.scss */
 .hours-short {
   font-size: 11px;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 232, bootstrap/_styles.scss */
+/* line 362, bootstrap/_styles.scss */
 .hours-short a {
   color: #e2e2e2;
 }
-/* line 234, bootstrap/_styles.scss */
+/* line 364, bootstrap/_styles.scss */
 .hours-short a:hover {
   color: #fff;
 }
 
-/* line 240, bootstrap/_styles.scss */
+/* line 370, bootstrap/_styles.scss */
 .social-links {
   text-align: right;
   margin-top: 10px;
 }
-/* line 244, bootstrap/_styles.scss */
+/* line 374, bootstrap/_styles.scss */
 .social-links a svg {
   opacity: 0.8;
 }
 
-/* line 250, bootstrap/_styles.scss */
+/* line 380, bootstrap/_styles.scss */
 .social-links-bottom {
   text-align: center;
 }
-/* line 253, bootstrap/_styles.scss */
+/* line 383, bootstrap/_styles.scss */
 .social-links-bottom a svg {
   background: #fff;
   border-radius: 40px;
   padding: 1px;
 }
-/* line 258, bootstrap/_styles.scss */
+/* line 388, bootstrap/_styles.scss */
 .social-links-bottom a:hover {
   color: transparent;
 }
-/* line 260, bootstrap/_styles.scss */
+/* line 390, bootstrap/_styles.scss */
 .social-links-bottom a:hover svg {
   color: transparent;
   opacity: 1.0;
@@ -3541,13 +3704,13 @@ input[type="button"].btn-block {
   transition: opacity .5s;
 }
 
-/* line 273, bootstrap/_styles.scss */
+/* line 403, bootstrap/_styles.scss */
 .h-address {
   margin-top: 10px;
   text-align: right;
   margin-bottom: 20px;
 }
-/* line 277, bootstrap/_styles.scss */
+/* line 407, bootstrap/_styles.scss */
 .h-address span {
   font-size: 14px;
   line-height: 26px;
@@ -3555,7 +3718,7 @@ input[type="button"].btn-block {
   font-family: "nimbus-sans-condensed",sans-serif,sans-serif;
 }
 
-/* line 285, bootstrap/_styles.scss */
+/* line 415, bootstrap/_styles.scss */
 .h-phone {
   text-transform: uppercase;
   font-size: 24px;
@@ -3565,12 +3728,12 @@ input[type="button"].btn-block {
   letter-spacing: -0.5px;
   color: #52473A;
 }
-/* line 293, bootstrap/_styles.scss */
+/* line 423, bootstrap/_styles.scss */
 .h-phone span {
   font-size: 24px;
   line-height: 20px;
 }
-/* line 296, bootstrap/_styles.scss */
+/* line 426, bootstrap/_styles.scss */
 .h-phone span strong {
   font-size: 24px;
   color: #555555;
@@ -3578,7 +3741,44 @@ input[type="button"].btn-block {
 }
 
 /*Footer Styles */
-/* line 311, bootstrap/_styles.scss */
+/* line 441, bootstrap/_styles.scss */
+.plus-div {
+  background: url(../i/plus-sign.png) no-repeat;
+  display: block;
+  height: 240px;
+  width: 240px;
+  margin: 10px auto;
+}
+
+/* line 448, bootstrap/_styles.scss */
+.promo-row {
+  margin-bottom: 50px;
+}
+
+/* line 451, bootstrap/_styles.scss */
+.free {
+  font-size: 140px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+
+/* line 458, bootstrap/_styles.scss */
+.promo-text {
+  color: #F7AA72;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+/* line 464, bootstrap/_styles.scss */
+.promo-text span {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* line 470, bootstrap/_styles.scss */
 .foot-h1 {
   font-size: 35px;
   text-transform: uppercase;
@@ -3586,24 +3786,24 @@ input[type="button"].btn-block {
   text-align: center;
   color: #8F7390;
 }
-/* line 317, bootstrap/_styles.scss */
+/* line 476, bootstrap/_styles.scss */
 .foot-h1 span {
   text-transform: none;
   display: block;
   padding-top: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   color: #fff;
 }
 
-/* line 327, bootstrap/_styles.scss */
+/* line 486, bootstrap/_styles.scss */
 .foot-h2 {
   font-size: 35px;
   text-transform: uppercase;
   text-align: center;
   color: #8F7390;
 }
-/* line 332, bootstrap/_styles.scss */
+/* line 491, bootstrap/_styles.scss */
 .foot-h2 span {
   text-transform: uppercase;
   display: block;
@@ -3614,87 +3814,87 @@ input[type="button"].btn-block {
   letter-spacing: -0.5px;
 }
 
-/* line 343, bootstrap/_styles.scss */
+/* line 502, bootstrap/_styles.scss */
 .footer-bar {
   background: #383838;
   padding: 50px 0px 50px 0px;
 }
 
-/* line 347, bootstrap/_styles.scss */
+/* line 506, bootstrap/_styles.scss */
 .footer-copyright {
   background: #362f2d;
   padding: 10px 0px 10px 0px;
 }
 
-/* line 352, bootstrap/_styles.scss */
+/* line 511, bootstrap/_styles.scss */
 .f-map img {
   margin-bottom: 20px;
 }
 
-/* line 356, bootstrap/_styles.scss */
+/* line 515, bootstrap/_styles.scss */
 .copyright {
   text-align: center;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   color: #e2e2e2;
 }
-/* line 361, bootstrap/_styles.scss */
+/* line 520, bootstrap/_styles.scss */
 .copyright a {
   color: #ffffff;
 }
 
-/* line 366, bootstrap/_styles.scss */
+/* line 525, bootstrap/_styles.scss */
 .contact-box {
   color: #fef4e6;
   min-height: 160px;
 }
-/* line 369, bootstrap/_styles.scss */
+/* line 528, bootstrap/_styles.scss */
 .contact-box h4 {
   margin-top: 0px;
 }
 
-/* line 374, bootstrap/_styles.scss */
+/* line 533, bootstrap/_styles.scss */
 .footer-links {
   min-height: 160px;
 }
-/* line 377, bootstrap/_styles.scss */
+/* line 536, bootstrap/_styles.scss */
 .footer-links li ul {
   list-style-type: none;
 }
 
-/* line 383, bootstrap/_styles.scss */
+/* line 542, bootstrap/_styles.scss */
 .footer-menu {
   list-style-type: none;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
 }
-/* line 387, bootstrap/_styles.scss */
+/* line 546, bootstrap/_styles.scss */
 .footer-menu a {
   color: #fef4e6;
 }
-/* line 389, bootstrap/_styles.scss */
+/* line 548, bootstrap/_styles.scss */
 .footer-menu a:hover {
   color: black;
 }
 
 /* Callouts */
-/* line 397, bootstrap/_styles.scss */
+/* line 556, bootstrap/_styles.scss */
 .callout-title {
   text-align: center;
   font-size: 24px;
   font-family: "nimbus-sans-condensed", sans-serif;
   text-shadow: 1px 1px 0px white;
 }
-/* line 402, bootstrap/_styles.scss */
+/* line 561, bootstrap/_styles.scss */
 .callout-title a {
   color: #333333;
 }
-/* line 404, bootstrap/_styles.scss */
+/* line 563, bootstrap/_styles.scss */
 .callout-title a:hover {
   text-decoration: none;
 }
 
-/* line 410, bootstrap/_styles.scss */
+/* line 569, bootstrap/_styles.scss */
 .callout-body {
   padding: 20px 0;
   color: #fff;
@@ -3702,53 +3902,53 @@ input[type="button"].btn-block {
   font-size: 28px;
   font-family: "nimbus-sans-condensed", sans-serif;
 }
-/* line 416, bootstrap/_styles.scss */
+/* line 575, bootstrap/_styles.scss */
 .callout-body span {
   padding-top: 10px;
 }
 
 /* Services Pages */
-/* line 423, bootstrap/_styles.scss */
+/* line 582, bootstrap/_styles.scss */
 .services-tabs {
   margin-top: 30px;
 }
 
 /* Bootstrap Dropdown Fix */
-/* line 428, bootstrap/_styles.scss */
+/* line 587, bootstrap/_styles.scss */
 ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;
 }
 
-/* line 431, bootstrap/_styles.scss */
+/* line 590, bootstrap/_styles.scss */
 .navbar .dropdown-menu {
   margin-top: 0px;
 }
 
 /* Team PAge */
-/* line 438, bootstrap/_styles.scss */
+/* line 597, bootstrap/_styles.scss */
 .team-row {
   margin-bottom: 20px;
 }
 
-/* line 442, bootstrap/_styles.scss */
+/* line 601, bootstrap/_styles.scss */
 .team-box {
   border: 1px solid #8D8881;
 }
 
-/* line 446, bootstrap/_styles.scss */
+/* line 605, bootstrap/_styles.scss */
 .team-name {
   position: absolute;
   bottom: 0px;
   left: 30px;
 }
 
-/* line 452, bootstrap/_styles.scss */
+/* line 611, bootstrap/_styles.scss */
 .modal-thumb {
   float: left;
   margin-right: 20px;
 }
 
-/* line 457, bootstrap/_styles.scss */
+/* line 616, bootstrap/_styles.scss */
 .bx-wrapper .bx-pager {
   position: absolute;
   top: -10px !important;
@@ -3756,7 +3956,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   width: auto !important;
 }
 
-/* line 464, bootstrap/_styles.scss */
+/* line 623, bootstrap/_styles.scss */
 #bx-pager {
   width: 100%;
   text-align: center;
@@ -3764,48 +3964,48 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background: #f9f9f9;
   padding: 10px 0px 10px 0px;
 }
-/* line 471, bootstrap/_styles.scss */
+/* line 630, bootstrap/_styles.scss */
 #bx-pager a img {
   border: 1px solid #8D8881;
   margin-left: 5px;
 }
-/* line 476, bootstrap/_styles.scss */
+/* line 635, bootstrap/_styles.scss */
 #bx-pager a .active img {
   border: 1px solid #428BCA;
 }
 
-/* line 483, bootstrap/_styles.scss */
+/* line 642, bootstrap/_styles.scss */
 .item img {
   border: 1px solid #8D8881 !important;
 }
 
-/* line 487, bootstrap/_styles.scss */
+/* line 646, bootstrap/_styles.scss */
 .pager-instructions {
   font-size: 12px;
   color: #8D8881;
   text-align: center;
 }
 
-/* line 494, bootstrap/_styles.scss */
+/* line 653, bootstrap/_styles.scss */
 .maps-box {
   width: 100%;
   overflow: hidden;
 }
-/* line 497, bootstrap/_styles.scss */
+/* line 656, bootstrap/_styles.scss */
 .maps-box img {
   position: relative;
   left: 50%;
   margin-left: -960px;
 }
 
-/* line 504, bootstrap/_styles.scss */
+/* line 663, bootstrap/_styles.scss */
 .maps-box-narrow {
   margin-top: 20px;
   width: 100%;
   overflow: hidden;
   border: 1px solid #000;
 }
-/* line 509, bootstrap/_styles.scss */
+/* line 668, bootstrap/_styles.scss */
 .maps-box-narrow img {
   position: relative;
   left: 50%;
@@ -3813,7 +4013,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 /* Testimonial 2 Page */
-/* line 518, bootstrap/_styles.scss */
+/* line 677, bootstrap/_styles.scss */
 .speech-bubble {
   background: #d8e7f0;
   border-bottom-right-radius: 10px;
@@ -3825,7 +4025,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   position: relative;
 }
 
-/* line 527, bootstrap/_styles.scss */
+/* line 686, bootstrap/_styles.scss */
 .speech-bubble-triangle {
   width: 1px;
   height: 1px;
@@ -3838,7 +4038,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   right: 20px;
 }
 
-/* line 540, bootstrap/_styles.scss */
+/* line 699, bootstrap/_styles.scss */
 .affix {
   top: 0px;
   width: 100%;
@@ -3849,12 +4049,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 /* No media query since this is the default in Bootstrap */
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 992px) {
-  /* line 553, bootstrap/_styles.scss */
+  /* line 712, bootstrap/_styles.scss */
   .navbar .caret {
     display: none;
   }
 
-  /* line 559, bootstrap/_styles.scss */
+  /* line 718, bootstrap/_styles.scss */
   .navbar .dropdown-menu {
     display: inline-block;
     position: relative;
@@ -3864,12 +4064,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     border: none;
     margin-left: 30px;
   }
-  /* line 569, bootstrap/_styles.scss */
+  /* line 728, bootstrap/_styles.scss */
   .navbar .dropdown-menu li a:before {
     content: '-';
   }
 
-  /* line 577, bootstrap/_styles.scss */
+  /* line 736, bootstrap/_styles.scss */
   .affix {
     position: relative !important;
   }

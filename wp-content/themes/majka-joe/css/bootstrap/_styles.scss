@@ -4,6 +4,50 @@
 
 // Base styles
 // --------------------------------------------------
+.box-title {
+  margin-top: 10%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.box-size1 {
+  height: auto;
+  background: #5a2049;
+  padding: 0 !important;
+  img {
+    width: 100%;
+    height: auto;
+    overflow-y:hidden;
+  }
+}
+.box-content {
+  font-size:20px;
+  padding-bottom: 25px;
+}
+.box-size2 {
+  height: auto;
+  background: #6b7e62;
+  padding: 0 !important;
+  img {
+    height: auto;
+    overflow-y:hidden;
+    width: 100%
+  }
+}
+.first-box {
+  background: #5a2049;
+  text-align: center;
+  color: #fff;
+}
+.home-left {
+  background-image: url(../i/home-second.jpg) no-repeat;
+  background-size: 1200px 500px;
+}
+.second-box {
+  background: #6b7e62;
+  text-align: center;
+  color: #fff;
+}
 
 .page-title {
   text-align: center;
@@ -109,6 +153,66 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
 /* Page Styles */
 
+.services-box {
+  position: relative;
+  top: -50px;
+  padding-top: 150px;
+  padding-bottom: 20px;
+  background: #5a2049;
+  text-align: center;
+  color: #fff;
+}
+
+.dr-majka {
+  background: url(../i/dr-majka-bg.jpg) no-repeat;
+  height: auto;
+  width: 100%;
+  background-size: 100% 150%;
+  background-position-y: -225px;
+  overflow-y:hidden;
+}
+
+.circle {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  display: inline-block;
+  position: relative;
+  top: -35px;
+
+}
+.majka-quote {
+  border-left: 1px solid #fff;
+  width: 300px;
+  height: 150px;
+  display: inline-block;
+  color: #fff;
+  margin: 16% 20px;
+  padding-left: 20px;
+}
+.majka-right {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 10% auto;
+  padding: 0 10%;
+}
+.down-arrow {
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+.down-arrow2 {
+  background-image: url(../i/down-arrow.png);
+  background-size: 25px 25px;
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
 #breadcrumbs {
   color: #8D8881;
   margin: 10px 0px 10px 0px;
@@ -129,7 +233,6 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
 .body-bg {
   background-color: #ffffff;
-  padding-bottom: 20px;
   .container {
     background: #fff;
   }
@@ -170,6 +273,20 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
 /*Testimonials Page Styles */
+
+.callout {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  span {
+    line-height: 2;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
+
 .testimonial-row {
   margin-top: 10px;
 }
@@ -177,6 +294,10 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 .testimonial-bar {
   padding: 20px 0px 10px 0px;
   background: #675267; 
+}
+.testimonial-bar2 {
+  padding: 20px 0px 10px 0px;
+  background: #5D765D; 
 }
 
 .testimonial-text {
@@ -208,13 +329,22 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   top: -50px;
 }
 }
+#triangle-down2 {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+  z-index: 1;
+  position: absolute;
+}
 .triangle-down {  
-  width: 110%;
+  width: 105%;
   margin-top: 20px;
   height: 200px;
   left: -5%;
   background: url(../i/triangle-bg.png) no-repeat;
-  background-size: 100% auto;
+  background-size: 105% auto;
   z-index: 1;
   position: absolute;
 }
@@ -308,6 +438,35 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
 /*Footer Styles */
 
+.plus-div {
+  background: url(../i/plus-sign.png) no-repeat;
+  display: block;
+  height: 240px;
+  width: 240px;
+  margin: 10px auto;
+}
+.promo-row {
+  margin-bottom: 50px;
+}
+.free {
+  font-size: 140px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+.promo-text{
+  color:#F7AA72;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+  span {
+    color: #fff;
+    font-size: 24px;
+  }
+}
+
 .foot-h1 {
   font-size: 35px;
   text-transform: uppercase;
@@ -319,7 +478,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     display: block;
     padding-top: 20px;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     color:#fff;
   }
 }
