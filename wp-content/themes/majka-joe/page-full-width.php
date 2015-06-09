@@ -29,7 +29,6 @@ get_header();
                               <hr/>
                                 <?php if(get_field('first-content')); ?>
                                     <?php the_field('first-content'); ?>
-                              <div class="down-arrow2"></div>
 
                                   <?php endwhile; else: ?>
                                       
@@ -43,7 +42,8 @@ get_header();
                         </article> 
                   </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size-service">
-                        <img src="<?php bloginfo('template_url'); ?>/i/service-img.jpg" />
+                    <?php if(get_field('first-pic')); ?>
+                        <img src="<?php the_field('first-pic'); ?>" />
                     </div>              
             </div>
     </div>
@@ -57,4 +57,12 @@ get_header();
         </div>
     </div>
 </div>
+<?php $bottom_callout = get_field('bottom-callout'); ?>
+<?php
+              if(!empty($bottom_callout)) {
+                  echo '<div class="testimonial-bar2"><div class="container"><div class="row"><div class="callout">';
+                    if(!empty($bottom_callout)) { echo $bottom_callout; } else { echo ''; }
+                  echo '</div></div></div></div>';
+              }
+            ?>
 <?php get_footer(); ?>

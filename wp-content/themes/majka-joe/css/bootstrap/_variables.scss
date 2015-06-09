@@ -27,7 +27,7 @@ $top-bar-color: #432712 !default;
 $footer-bar-color: #383838 !default;
 $copyright-bar-color: #362f2d !default;
 
-$owl-main-color: #ff5335 !default;
+$owl-main-color: #fff !default;
 
 
 //== Scaffolding
@@ -122,7 +122,7 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
+$border-radius-base:        0px !default;
 $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
@@ -169,7 +169,7 @@ $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-bg:                 #6B7E62 !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;

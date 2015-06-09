@@ -21,7 +21,7 @@ get_header(); ?>
                                   ?>
                                 </h1>
                           </header>
-                            <section itemprop="articleBody">
+                            <section itemprop="articleBody" class="articleBody">
                               <?php if(get_field('first-title'));?>
                                 <h2 class="service-h2"><?php the_field('first-title'); ?></h2>
                               <hr/>
@@ -42,7 +42,7 @@ get_header(); ?>
                   </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size-service">
                         <?php if(get_field('first-pic')); ?>
-                        <?php the_field('first-pic'); ?>
+                        <img src="<?php the_field('first-pic'); ?>" />
                     </div>          
             </div>
     </div>
@@ -53,7 +53,7 @@ get_header(); ?>
                               <section>
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size2">
                                    <?php if(get_field('second-pic')); ?>
-                                   <?php the_field('second-pic'); ?>
+                                   <img src="<?php the_field('second-pic'); ?>" />
                                   </div>
                                   <?php if(get_field('second-title'));?>
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size2">

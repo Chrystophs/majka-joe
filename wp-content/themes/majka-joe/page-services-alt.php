@@ -70,4 +70,12 @@ get_header(); ?>
         <?php wp_reset_query(); ?> 
     </div>
 </div>
+<?php $bottom_callout = get_field('bottom-callout'); ?>
+<?php
+              if(!empty($bottom_callout)) {
+                  echo '<div class="testimonial-bar2"><div class="container"><div class="row"><div class="callout">';
+                    if(!empty($bottom_callout)) { echo $bottom_callout; } else { echo ''; }
+                  echo '</div></div></div></div>';
+              }
+            ?>
 <?php get_footer(); ?>

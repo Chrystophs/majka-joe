@@ -14,6 +14,9 @@
     <title><?php wp_title(''); ?></title>
     
     <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
+    <!--Type Kit Fonts -->
+    <script src="//use.typekit.net/hxb1gvc.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 
     <?php wp_head(); ?>
     <?php get_wpbs_theme_options(); ?>

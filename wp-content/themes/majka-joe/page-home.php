@@ -6,7 +6,8 @@ get_header();
 
 ?>
 <div class="body-bg">
-  <div class="head-img"><img src="<?php bloginfo('template_url'); ?>/i/home-bg.png" /></div>
+<?php if(has_post_thumbnail()); ?>
+  <div class="head-img"><?php the_post_thumbnail(); ?></div>
     <div class="container">
           <div class="row">
               <div class="col-xs-12">
@@ -55,7 +56,8 @@ get_header();
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size1">
-                                   <img src="<?php bloginfo('template_url'); ?>/i/home-first.jpg" />
+                                  <?php if(get_field('first-pic')); ?>
+                                   <img src="<?php the_field('first-pic'); ?>" />
                                   </div>
                         	</section>
                         </article>
@@ -66,7 +68,8 @@ get_header();
                           <article>
                               <section>
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size2">
-                                   <img src="<?php bloginfo('template_url'); ?>/i/home-second.jpg" />
+                                  <?php if(get_field('second-pic'));?>
+                                   <img src="<?php the_field('second-pic'); ?>" />
                                   </div>
                                   <?php if(get_field('second-title'));?>
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size2">

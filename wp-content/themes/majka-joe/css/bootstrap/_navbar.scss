@@ -194,11 +194,9 @@
   &:focus {
     outline: none;
     color: $navbar-default-toggle-hover-color;
-    border-bottom: 5px solid #5A2049;
   }
   &:hover {
     color: $navbar-default-toggle-hover-color;
-    border-bottom: 5px solid #5A2049;
   }
 
   // Bars
@@ -233,7 +231,6 @@
     border-bottom: 8px solid transparent;
   }
   :hover {
-    border-bottom: 8px solid #5A2049;
         .caret {
           display: block;
         }
@@ -422,6 +419,7 @@
       &:focus {
         color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
+    border-bottom: 8px solid #5A2049;
       }
     }
     > .active > a {
@@ -430,7 +428,6 @@
       &:focus {
         color: $navbar-default-link-active-color;
         background-color: $navbar-default-link-active-bg;
-        border-bottom: 8px solid #5A2049;
         .caret {
           display: block;
         }

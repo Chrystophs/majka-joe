@@ -1,6 +1,3 @@
-<!--Typekit Fonts-->
-<script src="//use.typekit.net/hxb1gvc.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
 
 <?php
 
@@ -62,6 +59,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
 	
+	add_theme_support( 'post-formats', array(
+		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
+	) );
 	register_post_type( 'gallery',
 		array(
 			'labels' => array(
@@ -279,16 +279,16 @@ function show_all_thumbs($atts) {
 	$images =& get_children('post_type=attachment&post_mime_type=image&output=ARRAY_N&orderby=menu_order&order=ASC&exclude='.$excludechild.'&post_parent='.$post->ID);
 	
     $i = 1;
-	$thumblist .=  '<div class="row gallery-row">';
+	$thumblist .=  '<div class="">';
 	if($images){
 		if ($numrows == -1) {
 			foreach( $images as $imageID => $imagePost ){
 		
 				unset($the_b_img);
 				unset($the_l_img);
-				$the_b_img = wp_get_attachment_image($imageID, $imgthumb, true, array('class'=>'img-thumbnail img-responsive'));
-				$the_l_img = wp_get_attachment_image($imageID, $linksize, false, array('class'=>'img-thumbnail img-responsive'));
-				$thumblist .= '<div class="col-lg-'.(12/$numperrow).'"><div class="gallery-row-img">';
+				$the_b_img = wp_get_attachment_image($imageID, $imgthumb, true, array('class'=>'img-responsive'));
+				$the_l_img = wp_get_attachment_image($imageID, $linksize, false, array('class'=>'img-responsive'));
+				$thumblist .= '<div class=""><div class="">';
 				if ($disablelinks == 0) {
 					$src = wp_get_attachment_image_src( $imageID, $linksize);
 					$thumblist .= '<a class="gallery-'.$imageID.'" href="'.$src[0].'" data-featherlight="image">';
@@ -304,7 +304,7 @@ function show_all_thumbs($atts) {
 				}
 				$thumblist .= '</div></div>';
 				if($i % $numperrow == 0) {
-					$thumblist .= '</div><div class="row gallery-row">';
+					$thumblist .= '</div><div class="">';
 			
 				}
             	$i++;
@@ -334,7 +334,7 @@ function show_all_thumbs($atts) {
 				  }
 				  $thumblist .= '</div></div>';
 				  if($j % $numperrow == 0) {
-					  $thumblist .= '</div><div class="row gallery-row">';
+					  $thumblist .= '</div><div class="">';
 				  }
 				  $j++;
 				} else {
