@@ -78,7 +78,7 @@ get_header(); ?>
                                     </address>
                                 <?php endif; ?>
                                 <address>
-                                    <span class="contact-hours">Practice Hours</span>
+                                    <span class="contact-hours">Practice Hours:</span><br/>
                                     <?php if (!empty($hours_sunday)) : ?>
                                         <meta itemprop="openingHours" content="Su <?php echo $hours_sunday_schema; ?>">Sun: <strong><?php echo $hours_sunday; ?></strong><br/>
                                     <?php endif; ?>

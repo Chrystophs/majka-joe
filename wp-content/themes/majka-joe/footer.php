@@ -2,28 +2,63 @@
     <div class="footer-bar">
         <div class="container">   
             <div class="row promo-row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="free">free
+            <?php 
+                $args = array('post_type' => 'promos', 'order' => 'date', 'posts_per_page' => 2 );
+                $loop = new WP_Query( $args );
+                $price = get_field('price');           
+                $content = get_field('content');
+                $value = get_field('value');
+                $expires = get_field('expires');
+            ?>
+                <?php $y = 0; ?>
+                    <?php $num_per_row = 2; ?>
+                        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"> 
+                                <a href="<?php bloginfo('template_url'); ?>/promotions/" class="promo-link">
+                                    <div class="free"> 
+                                        <?php the_field('price'); ?>
+                                    </div>
+                                    <div class="promo-text">
+                                        <?php the_field('content'); ?><br/>
+                                            <span>
+                                                <?php the_field('value'); ?>
+                                            </span>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php $y++; ?>
+                        <?php if ($y == 1) { echo '<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><div class="plus-div"></div></div>'; } ?>
+                <?php if ($y % $num_per_row == 0 ){ echo ''; } ?>
+            <?php endwhile;?>
+            <?php wp_reset_query(); ?>
+
+               <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <a href="<?php bloginfo('template_url'); ?>/promotions/" class="promo-link">
+                    free
                     </div>
                     <div class="promo-text">
                     EXAM AND X-RAYS<br/>
                     FOR NEW PATIENTS<br/>
                     <span>A $195 VALUE</span>
                     </div>
+                    </a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="plus-div"></div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <a href="<?php bloginfo('template_url'); ?>/promotions/" class="promo-link">
                     <div class="free">free
                     </div>
                     <div class="promo-text">
                     IMPLANT CONSULTATION<br/>
                     <span>$500 OFF TREATMENT</span>
                     </div>
-                </div>
+                    </a>
+                </div>-->
             </div>
             <div class="row">
+            <a href="<?php bloginfo('template_url'); ?>/contact-us/" alt="Contact Us" >
             	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <?php 
                             $contact_fax = contact_detail('fax', '' , '', false);
@@ -39,6 +74,8 @@
                         </div>
 
                 </div>
+            </a>
+            <a href="<?php bloginfo('template_url'); ?>/contact-us/" alt="Contact Us" >
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <?php 
                             $contact_h_short = contact_detail('hours_short', '' , '', false);
@@ -50,6 +87,7 @@
                         </div>
 
                 </div>
+            </a>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                         <address>
                         <div class="foot-h2">Phone<br/><span>

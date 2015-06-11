@@ -11,7 +11,7 @@ get_header(); ?>
                       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                           <article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/WebPage">
                             <header class="article-header">
-                                <h1 class="service-title" itemprop="headline">
+                                <h1 class="service-title top-margin" itemprop="headline">
                                   <?php
                                     if(get_field('custom_page_headline_(h1)')) {
                                           the_field('custom_page_headline_(h1)');
@@ -40,7 +40,8 @@ get_header(); ?>
                         </article> 
                   </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size-service">
-                        <img src="<?php bloginfo('template_url'); ?>/i/service-img.jpg" />
+                      <?php get_field('first-pic'); ?>
+                        <img src="<?php the_field('first-pic'); ?>" />
                     </div>              
             </div>
     </div>
@@ -55,7 +56,7 @@ get_header(); ?>
           
           <?php while ($page_query->have_posts()) : $page_query->the_post(); ?>
           <section>
-              <div class="row services-row">
+              <div class="row services-row center">
                     <div class="col-xs-12 col-sm-12 col-md-<?php echo 12/$num_per_row; ?> col-lg-<?php echo 12/$num_per_row; ?>">
                             <div class="panel-heading">
                                 <div class="panel-title"><?php the_title(); ?></div>  

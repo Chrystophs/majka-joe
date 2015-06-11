@@ -11,7 +11,7 @@ get_header(); ?>
                       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                           <article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/WebPage">
                           <header class="article-header">
-                              <h1 class="service-title" itemprop="headline">
+                              <h1 class="service-title top-margin" itemprop="headline">
                   <?php
                                     if(get_field('custom_page_headline_(h1)')) {
                                           the_field('custom_page_headline_(h1)');

@@ -3,85 +3,40 @@
 /* Template Name: Team Page */
 
 get_header(); ?>
-<div class="body-bg">
-	<div class="container">
-    	<div class="row">
-        	<div class="col-xs-12">
-            	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-          		<div class="content-block">
-                  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
-                  <article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/WebPage">
-                        	<header class="article-header">
-                            	<h1 class="page-title" itemprop="headline">
-								  <?php
-                                    if(get_field('custom_page_headline_(h1)')) {
-                                          the_field('custom_page_headline_(h1)');
-                                    } else {
-                                          the_title();
-                                    }
-                                  ?>
-                                </h1>
-                            </header>
-                            <section itemprop="articleBody">
-					  
-								<?php
-                                  if(get_field('page_sub-headline_(h2)')) {
-                                    echo '<h2>';
-                                        the_field('page_sub-headline_(h2)');
-                                    echo '</h2>';
-                                  }
-                                ?>
-                                <?php the_content(); ?>
-                                    
-                                <?php endwhile; else: ?>
-                                    
-                                  Sorry, there may have been a problem.
-                                
-                                  <?php get_search_form(); ?>
-                                
-                                <?php endif; ?>
-                                <?php wp_reset_query(); ?>
-                                
-                          	</section>
-                  			<hr/>
-							<?php 
-                                $args = array( 'post_type' => 'team', 'order' => 'ASC' );
-                                $loop = new WP_Query( $args );
+<div class="body-bg" style="margin-top:20px;">
+                            <?php 
+                              $args = array( 'post_type' => 'team', 'order' => 'ASC', 'orderby' => 'menu_order' );
+                              $loop = new WP_Query( $args );
                             ?>
-                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                            <section>
-                                <div class="row">
-                                    
-                                    <?php if ( has_post_thumbnail() ) { ?>
-                                        <div class="col-xs-3">
-                                             <?php the_post_thumbnail('medium',array('class'=>'img-responsive img-thumbnail')); ?>
+                              <div class="row">
+                                <?php $y = 0; ?>
+                                  <?php $num_per_row = 2; ?>
+                                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 no-margin">
+                                      <section>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 center">
+                                          <?php if ( has_post_thumbnail() ) { ?>
+                                          <?php the_post_thumbnail('large',array('class'=>'')); ?>
+                                          <?php } ?>
+                                          </div>
+                                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 team-content">
+                                          <h3><?php the_title(); ?></h3>
+                                          <?php the_content(); ?>
                                         </div>
-                                    <?php } ?>
-                                    
-                                    <?php if ( has_post_thumbnail() ) { ?><div class="col-xs-9"><?php } else { ?><div class="col-xs-12"><?php } ?>
-                                    	<h3>
-                                          	<?php the_title(); ?>
-                                        </h3>
-                                        <?php the_content(); ?>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <hr/>
-                                    </div>
-                                </div>
-                            </section>
-                            <?php endwhile; ?>
-                            <?php wp_reset_query(); ?>
-                     </article>  
-               </div>          			
-          </div>
-        </div>
-   	</div>
+                                       </section>
+                                      </div>
+                               <?php $y++; ?>
+                               <?php if ($y % $num_per_row == 0) { echo '</div><div class="row">'; } ?>
+                              <?php endwhile; ?>
+                            <?php wp_reset_query(); ?> 
+                            </div>
 </div>
-		
+<?php $bottom_callout = get_field('bottom-callout'); ?>
+<?php 
+          if(!empty(get_field('bottom-callout'))) {
+            echo '<div class="testimonial-bar2"><div class="container"><div class="row"><div class="callout">';
+              if(!empty($bottom_callout)){ echo $bottom_callout; } else {echo '';}
+              echo '</div></div></div></div>';
+          }
+        ?>	
 <?php get_footer(); ?>

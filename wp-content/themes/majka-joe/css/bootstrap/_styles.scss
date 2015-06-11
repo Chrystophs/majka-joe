@@ -8,13 +8,19 @@
   margin: 0 auto;
   text-align: center;
 }
+.promo-link {
+  text-decoration: none !important;
+  :hover {
+    text-decoration: none !important;
+  }
+}
 .promo-box {
   color:#333;
   border: 5px dashed #777;
-  border-radius: 10px;
   margin: 20px auto;
   padding: 20px;
   text-align: center;
+  text-transform: uppercase;
   p {
     span {
       display: block;
@@ -28,6 +34,7 @@
     color: #777;
     font-size: 15px;
     font-style: italic;
+    text-transform: capitalize; 
   }
 }
 .team-content {
@@ -54,7 +61,12 @@
 }
 .box-content {
   font-size:24px;
-  padding-bottom: 25px;
+  padding: 0 20% 25px;
+}
+@media (max-width: 992px ) {
+  .box-content {
+    padding: 0 5% 25px;
+  }
 }
 .box-size2 {
   height: auto;
@@ -95,6 +107,14 @@
   font-size: 60px;
   text-transform: uppercase;
   color: #C58A5E;
+}
+.top-margin {
+  margin-top: 15%;
+}
+@media (max-width: 1375px) {
+  .top-margin {
+    margin-top:0 ;
+  }
 }
 .service-h2 {
   padding-top: 15px;
@@ -201,6 +221,18 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
 /* Page Styles */
+
+.list {
+  margin-bottom:30px; 
+  color:rgb(107, 126, 98); 
+  :hover {
+    color:rgb(90, 32, 73);
+    -moz-transition:color 1s; //Firefox
+    -webkit-transition: color 1s; //Safari and Chrome
+    -o-transition: color 1s; //Opera
+    transition: color 1s;
+  }
+}
 
 .box-size-service {
   height: auto;
@@ -367,7 +399,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
 .contact-hours {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 18px;
   margin: 5px 0px 10px 0px;
 }
@@ -502,6 +534,7 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     svg {
       background: #fff;
       border-radius: 40px;
+      margin-left: 10px;
       padding: 1px;
     }
     &:hover {
@@ -509,10 +542,10 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
       svg {
         color: transparent;
         opacity: 1.0; 
-        -moz-transition: opacity .5s; /* Firefox */
-        -webkit-transition: opacity .5s; /* Safari and Chrome */
-       -o-transition: opacity .5s; /* Opera */
-       transition: opacity .5s;
+        -moz-transition: opacity 1s; /* Firefox */
+        -webkit-transition: opacity 1s; /* Safari and Chrome */
+       -o-transition: opacity 1s; /* Opera */
+       transition: opacity 1s;
       }
     }
   }

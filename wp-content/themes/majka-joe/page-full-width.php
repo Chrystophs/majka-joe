@@ -23,7 +23,7 @@ get_header();
                                   ?>
                                 </h1>
                           </header>
-                            <section itemprop="articleBody">
+                            <section itemprop="articleBody" class="box-content">
                               <?php if(get_field('first-title'));?>
                                 <h2 class="service-h2"><?php the_field('first-title'); ?></h2>
                               <hr/>

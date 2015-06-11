@@ -60,7 +60,7 @@ get_header(); ?>
                                     <div class="box-title">
                                       <?php the_field('second-title'); ?>
                                     </div>
-                                    <div class="down-arrow3"></div>
+                                    <div class="down-arrow2"></div>
                                   <?php if(get_field('second-content'));?>
                                     <div class="box-content">
                                       <?php the_field('second-content'); ?>
@@ -70,14 +70,21 @@ get_header(); ?>
                         </article>
                 </div>
     </div>
-<?php if (of_get_option('disable_footer_callouts') != 1) : ?> 
-<div class="testimonial-bar">
-      <div class="row">
-        <?php if(get_field('bottom-callout'));?>
-            <div class="callout" style="margin:20px 20px;">
-            <?php the_field('bottom-callout'); ?>
-            </div>
+<div class="body-bg">
+  <div class="row">
+    <div class="container">
+      <div class="col-xs-12">
+        <?php the_content(); ?>
       </div>
+    </div>
+  </div>
 </div>
-<?php endif; ?>
+<?php $bottom_callout = get_field('bottom-callout'); ?>
+<?php
+              if(!empty($bottom_callout)) {
+                  echo '<div class="testimonial-bar2"><div class="container"><div class="row"><div class="callout">';
+                    if(!empty($bottom_callout)) { echo $bottom_callout; } else { echo ''; }
+                  echo '</div></div></div></div>';
+              }
+            ?>
 <?php get_footer(); ?>

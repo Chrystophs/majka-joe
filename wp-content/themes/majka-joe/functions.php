@@ -60,7 +60,7 @@ add_action( 'init', 'create_post_type' );
 function create_post_type() {
 	
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
+		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat', 'tour'
 	) );
 	register_post_type( 'gallery',
 		array(
@@ -81,6 +81,27 @@ function create_post_type() {
 				'custom-fields'
 				),
 			'rewrite' => array('slug' => 'gallery')
+		)
+	);
+	register_post_type( 'tour',
+		array(
+			'labels' => array(
+				'name' => __( 'Office Tour' ),
+				'singular_name' => __( 'Tour' )
+			),
+			'public' => true,
+			'menu_icon' => 'dashicons-format-gallery',
+			'has_archive' => true,
+			'map_meta_cap' => true,
+			'hierarchical' => true,
+			'supports' => array(
+				'title',
+				'editor',
+				'thumbnail',
+				'page-attributes',
+				'custom-fields'
+				),
+			'rewrite' => array('slug' => 'tour')
 		)
 	);
 	
@@ -469,10 +490,9 @@ function gpm_edit_form_after_title() {
 		$post_type = get_post_type( $post_ID );
 	}
 	
-	if( $post_type == 'gallery' ) :
+	if( $post_type == 'gallery') :
     	echo '<br/><p>Hint: <strong><em>To add images to the smile gallery, click the "Add Media" button below and upload your photos. Once your files have finished uploading, close the upload dialog and click "Publish" or "Update" on the right hand side.</em></strong></p>';	
 	endif;
-	
 }
 
 
