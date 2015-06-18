@@ -49,11 +49,11 @@ get_header(); ?>
     </div>
 </div>
 <div class="second-box">
-    		<div class="row">
-            	<div class="col-xs-12">
-                	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
+        <div class="row">
+              <div class="col-xs-12">
+                  <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
                 </div><?php 
-                                  $args = array( 'post_type' => 'tour', 'order' => 'ASC' );
+                                  $args = array( 'post_type' => 'otour', 'order' => 'ASC' );
                                   $loop = new WP_Query( $args ); 
                               ?>
                             <section>

@@ -233,6 +233,7 @@
   :hover {
         .caret {
           display: block;
+          opacity: 1;
         }
   }
 
@@ -414,22 +415,32 @@
       color: $navbar-default-link-color;
       font-weight: $navbar-default-font-weight;
       font-size: $navbar-default-font-size;
-
       &:hover,
       &:focus {
         color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
+      -webkit-transition: all .25s ease-in;
+      -moz-transition: all .25s ease-in;
+      -o-transition: all .25s ease-in;
+      transition: all .25s ease-in;
        border-bottom: 8px solid #5A2049;
       }
     }
     > .active > a {
-      &,
+       border-bottom: 8px solid #5A2049;
+      &:hover {
+
+        .caret {
+          display: none;
+        }
+      }
       &:hover,
       &:focus {
         color: $navbar-default-link-active-color;
         background-color: $navbar-default-link-active-bg;
         .caret {
           display: block;
+          opacity: 1;
         }
       }
     }
@@ -568,6 +579,15 @@
       &:focus {
         color: $navbar-inverse-link-disabled-color;
         background-color: $navbar-inverse-link-disabled-bg;
+      }
+    }
+    ul > li > a {
+      opacity: 0;
+      visibility: hidden;
+      &:hover,
+      &:focus {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }

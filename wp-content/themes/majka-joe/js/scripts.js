@@ -1,4 +1,13 @@
 //On Page Ready Scripts To Execute
+$(document).ready(function() {    
+  $('.navbar-default .navbar-nav > li.dropdown').hover(function() {
+$('ul.dropdown-menu', this).stop(true, true).slideDown('normal');
+$(this).addClass('open');
+      }, function() {
+$('ul.dropdown-menu', this).stop(true, true).slideUp('normal');
+$(this).removeClass('open');
+      });
+   });
 
 $(document).ready(function() {	
 	$("#owl-home-narrow").owlCarousel({
@@ -27,7 +36,8 @@ $(document).ready(function() {
 		navigation : true, // Show next and prev buttons
 		slideSpeed : 300,
 		paginationSpeed : 400,
-		singleItem:true
+		singleItem:true,
+		loop: true
 	});
 	
 	$('.gfield input').addClass('form-control');

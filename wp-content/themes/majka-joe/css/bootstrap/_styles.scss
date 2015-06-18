@@ -223,16 +223,17 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 /* Page Styles */
 
 .list {
+  font-size: 28px;
   margin-bottom:30px; 
-  color:rgb(107, 126, 98); 
+  color:rgb(107, 126, 98);
   :hover {
     color:rgb(90, 32, 73);
-    -moz-transition:color 1s; //Firefox
-    -webkit-transition: color 1s; //Safari and Chrome
-    -o-transition: color 1s; //Opera
-    transition: color 1s;
+    -moz-transition:all 1s; //Firefox
+    -webkit-transition: all 1s; //Safari and Chrome
+    -o-transition: all 1s; //Opera
+    transition: all 1s;
   }
-}
+} 
 
 .box-size-service {
   height: auto;
@@ -302,6 +303,16 @@ box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   }
   .majka-quote {
     margin-left: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .circle {
+    top: -45px;
+  }
+}
+@media (max-width: 992px) {
+  .circle {
+    top: 35px;
   }
 }
 .majka-right {

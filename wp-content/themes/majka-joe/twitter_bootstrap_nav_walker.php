@@ -47,9 +47,9 @@ $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $cl
 
 if ($args->has_children && $depth > 0) {
 $class_names .= ' dropdown-submenu';
-} else if($args->has_children && $depth === 0) {
+}else if($args->has_children && $depth === 0) {
 $class_names .= ' dropdown';
-}
+} 
 
 $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 

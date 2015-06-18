@@ -60,7 +60,7 @@ add_action( 'init', 'create_post_type' );
 function create_post_type() {
 	
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat', 'tour'
+		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
 	) );
 	register_post_type( 'gallery',
 		array(
@@ -83,11 +83,11 @@ function create_post_type() {
 			'rewrite' => array('slug' => 'gallery')
 		)
 	);
-	register_post_type( 'tour',
+	register_post_type( 'otour',
 		array(
 			'labels' => array(
 				'name' => __( 'Office Tour' ),
-				'singular_name' => __( 'Tour' )
+				'singular_name' => __( 'OTour' )
 			),
 			'public' => true,
 			'menu_icon' => 'dashicons-format-gallery',
@@ -101,7 +101,7 @@ function create_post_type() {
 				'page-attributes',
 				'custom-fields'
 				),
-			'rewrite' => array('slug' => 'tour')
+			'rewrite' => array('slug' => 'otour')
 		)
 	);
 	

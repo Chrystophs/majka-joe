@@ -97,11 +97,13 @@
 	*display: inline;/*IE7 life-saver */
 	margin: 5px;
 	padding: 3px 10px;
-	font-size: 12px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
+	font-size: 18px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 	background: $owl-main-color;
+	font-family: inherit;
+	text-transform: capitalize;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.8;
 }
