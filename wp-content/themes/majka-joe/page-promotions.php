@@ -58,11 +58,11 @@ get_header(); ?>
         ?>
         <div class="row">
           <?php $y = 0; ?>
-            <?php $num_per_row = 3; ?>
+            <?php $num_per_row = 2; ?>
               <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <section>
                       <div class="col-xs-12 col-sm-12 col-md-<?php echo 12/$num_per_row ?> col-lg-<?php echo 12/$num_per_row ?>">
-                        <div class="promo-box">
+                        <div class="<?php if($y % 2 == 0) { echo 'promo-box2' ; }  ?> promo-box">
                           <h1><?php the_field('price'); ?></h1>
                             <p><?php the_field('content');?><span><?php the_field('value'); ?></span></p>
                           <h5>*Expires: <?php the_field('expires'); ?></h5>

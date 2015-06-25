@@ -21,13 +21,12 @@ get_header(); ?>
                                   ?>
                                 </h1>
                           </header>
-                            <section itemprop="articleBody" class="articleBody">
+                            <section itemprop="articleBody" class="articleBody box-content">
                               <?php if(get_field('first-title'));?>
                                 <h2 class="service-h2"><?php the_field('first-title'); ?></h2>
                               <hr/>
                                 <?php if(get_field('first-content')); ?>
                                     <?php the_field('first-content'); ?>
-                               <?php the_content(); ?>
 
                                   <?php endwhile; else: ?>
                                       
@@ -73,7 +72,7 @@ get_header(); ?>
 <div class="body-bg">
   <div class="row">
     <div class="container">
-      <div class="col-xs-12">
+      <div class="col-xs-12 top-bot-margin">
         <?php the_content(); ?>
       </div>
     </div>
@@ -82,7 +81,7 @@ get_header(); ?>
 <?php $bottom_callout = get_field('bottom-callout'); ?>
 <?php
               if(!empty($bottom_callout)) {
-                  echo '<div class="testimonial-bar2"><div class="container"><div class="row"><div class="callout">';
+                  echo '<div class="testimonial-bar"><div class="container"><div class="row"><div class="callout">';
                     if(!empty($bottom_callout)) { echo $bottom_callout; } else { echo ''; }
                   echo '</div></div></div></div>';
               }

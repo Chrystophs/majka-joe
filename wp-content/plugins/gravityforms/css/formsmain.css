@@ -472,7 +472,7 @@ html>body .entry ul,
 }
 
 .gform_wrapper .top_label .gfield_label {
-	margin: 0.625em 0 0.500em 0;
+	margin: 0.625em 0 0 0;
 	font-weight: bold;
 	display: -moz-inline-stack;
 	display: inline-block;
@@ -514,7 +514,7 @@ html>body .entry ul,
 }
 
 body .gform_wrapper label.gfield_label + div.ginput_container {
-	margin-top: 0.375em;
+	margin-top: 0;
 }
 
 /* Field Label Placement Overrides  ------------------------------------------------------*/
@@ -847,6 +847,7 @@ div.gf_page_steps+div.validation_error {
 	padding: 1em 0 0.625em 0;
 	margin: 1em 0 0 0;
 	clear: both;
+	text-align: right;
 }
 
 .gform_wrapper .gform_footer.right_label,

@@ -87,7 +87,7 @@ get_header();
     </div>
     <div class="dr-majka">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img src="<?php bloginfo('template_url'); ?>/i/majka.jpg" class="circle quote-divider" />
+        <img src="<?php bloginfo('template_url'); ?>/i/circle-bottom.jpg" class="circle quote-divider" />
           <div class="majka-quote">
            “I look forward to coming
             to work every day...

@@ -5,21 +5,24 @@
 get_header(); ?>
 
 <div class="maps-box">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5977.359689505097!2d-87.04571705577662!3d41.489540112545434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881199f3e9e1f8e9%3A0x718585bf56998602!2sJoseph+Majka%2C+DDS!5e0!3m2!1sen!2sus!4v1433447103884" width="100%" height="500" frameborder="0" style="border:0"></iframe>
+<?php $contact_google_map = contact_detail('google_maps', '' , '', false); ?>
+<?php if ( has_post_thumbnail() );?>
+    <a href="<?php echo $contact_google_map; ?>" target="_blank" alt="Directions"><?php the_post_thumbnail(); ?></a>
 </div>
-<div class="body-bg">
+<div class="body-bg purple-outer">
     <div class="container" id="b-container">
             <div class="row">
+                <div class="col-lg-12">
+                        <div class="map-content">
+                            <a href="<?php echo $contact_google_map; ?>" target="_blank" alt="Directions">Directions</a> 
+                            | 
+                            <a href="<?php echo $contact_google_map; ?>" target="_blank" alt="Lager View">View Larger</a>
+                        </div>
+                </div>
+
                 <div class="col-lg-5 col-md-5 col-sm-5" id="contact-sidebar">
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
-                            <div class="content-block">
-                                <?php if ( has_post_thumbnail() ) { ?>
-                                        <div class="page-thumbnail">
-                                            <?php the_post_thumbnail(array(400,400)); ?>
-                                        </div>   
-                                <?php } ?>
-                                <?php the_content(); ?>
-                                <div itemscope itemtype="http://schema.org/Dentist">
+                            <div class="content-block">                                <div itemscope itemtype="http://schema.org/Dentist">
                                 <?php 
                                     $contact_fax = contact_detail('fax', '' , '', false);
                                     $contact_line1 = contact_detail('address_line_1', '' , '', false);
@@ -49,6 +52,7 @@ get_header(); ?>
                                 <address itemscope itemtype="http://schema.org/PostalAddress">
                                     <span itemprop="description" class="contact-name"><?php bloginfo('description'); ?></span><br/>
                                     <span itemprop="name" class="contact-subname"><?php bloginfo('name'); ?></span>
+                                    <div class="service-divider2"></div>
                                     <div itemprop="address" itemtype="http://schema.org/PostalAddress">
                                         <span itemprop="streetAddress"><?php echo $contact_line1; ?>
                                         <?php
@@ -63,18 +67,18 @@ get_header(); ?>
                                 </address>
                                 <address>
                                     <?php if (!empty($phone_new)) : ?>
-                                        New Patients: <span itemprop="telephone"><strong><?php echo $phone_new; ?></strong></span><br/>
+                                        New Patients: <span itemprop="telephone"><strong class="green"><?php echo $phone_new; ?></strong></span><br/>
                                     <?php endif; ?>
                                     <?php if (!empty($phone_new)) : ?>
                                         Current Patients:
                                     <?php else: ?>
                                         Phone: 
                                     <?php endif; ?>
-                                        <span itemprop="telephone"><strong><?php echo $phone_current; ?></strong></span>
+                                        <span itemprop="telephone"><strong class="green"><?php echo $phone_current; ?></strong></span>
                                 </address>
                                 <?php if (!empty($contact_fax)) : ?>
                                     <address>
-                                        <span itemprop="faxNumber">Fax: <strong><?php echo $contact_fax; ?></strong></span>
+                                        <span itemprop="faxNumber">Fax: <strong class="green"><?php echo $contact_fax; ?></strong></span>
                                     </address>
                                 <?php endif; ?>
                                 <address>

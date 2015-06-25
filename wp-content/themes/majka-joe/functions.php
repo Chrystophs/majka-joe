@@ -1,4 +1,3 @@
-
 <?php
 
 require_once('partials/options-panel.php');
@@ -59,9 +58,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
 	
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
-	) );
 	register_post_type( 'gallery',
 		array(
 			'labels' => array(
@@ -83,6 +79,7 @@ function create_post_type() {
 			'rewrite' => array('slug' => 'gallery')
 		)
 	);
+	
 	register_post_type( 'otour',
 		array(
 			'labels' => array(
@@ -307,9 +304,9 @@ function show_all_thumbs($atts) {
 		
 				unset($the_b_img);
 				unset($the_l_img);
-				$the_b_img = wp_get_attachment_image($imageID, $imgthumb, true, array('class'=>'img-responsive'));
-				$the_l_img = wp_get_attachment_image($imageID, $linksize, false, array('class'=>'img-responsive'));
-				$thumblist .= '<div class=""><div class="">';
+				$the_b_img = wp_get_attachment_image($imageID, $imgthumb, true, array('class'=>'smile-img'));
+				$the_l_img = wp_get_attachment_image($imageID, $linksize, false, array('class'=>'smile-img'));
+				$thumblist .= '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 no-margin">';
 				if ($disablelinks == 0) {
 					$src = wp_get_attachment_image_src( $imageID, $linksize);
 					$thumblist .= '<a class="gallery-'.$imageID.'" href="'.$src[0].'" data-featherlight="image">';
@@ -323,7 +320,7 @@ function show_all_thumbs($atts) {
 				} else {
 					$thumblist .= '</span>';
 				}
-				$thumblist .= '</div></div>';
+				$thumblist .= '</div>';
 				if($i % $numperrow == 0) {
 					$thumblist .= '</div><div class="">';
 			
@@ -337,8 +334,8 @@ function show_all_thumbs($atts) {
 				if ($j <= ($numperrow*$numrows)) {
 				  unset($the_b_img);
 				  unset($the_l_img);
-				  $the_b_img = wp_get_attachment_image($imageID, $imgthumb, true, array('class'=>'img-thumbnail img-responsive'));
-				  $the_l_img = wp_get_attachment_image($imageID, $linksize, false, array('class'=>'img-thumbnail img-responsive'));
+				  $the_b_img = wp_get_attachment_image($imageID, $imgthumb, true, array('class'=>'img-thumbnail '));
+				  $the_l_img = wp_get_attachment_image($imageID, $linksize, false, array('class'=>'img-thumbnail '));
 				  $thumblist .= '<div class="col-lg-'.(12/$numperrow).'"><div class="gallery-row-img">';
 				  if ($disablelinks == 0) {
 					  	$src = wp_get_attachment_image_src( $imageID, $linksize);
@@ -490,11 +487,11 @@ function gpm_edit_form_after_title() {
 		$post_type = get_post_type( $post_ID );
 	}
 	
-	if( $post_type == 'gallery') :
+	if( $post_type == 'gallery' ) :
     	echo '<br/><p>Hint: <strong><em>To add images to the smile gallery, click the "Add Media" button below and upload your photos. Once your files have finished uploading, close the upload dialog and click "Publish" or "Update" on the right hand side.</em></strong></p>';	
 	endif;
+	
 }
-
 
 
 //Darken Color of Navbar

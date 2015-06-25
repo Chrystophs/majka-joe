@@ -42,7 +42,8 @@ get_header(); ?>
                         </article> 
                   </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-size-service">
-                        <img src="<?php bloginfo('template_url'); ?>/i/service-img.jpg" />
+                    <?php if(get_field('first-pic')); ?>
+                        <img src="<?php the_field('first-pic');?>"/>
                     </div>     			
             </div>
    	</div>

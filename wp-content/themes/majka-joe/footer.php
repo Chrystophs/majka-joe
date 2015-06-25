@@ -31,31 +31,6 @@
                 <?php if ($y % $num_per_row == 0 ){ echo ''; } ?>
             <?php endwhile;?>
             <?php wp_reset_query(); ?>
-
-               <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <a href="<?php bloginfo('template_url'); ?>/promotions/" class="promo-link">
-                    free
-                    </div>
-                    <div class="promo-text">
-                    EXAM AND X-RAYS<br/>
-                    FOR NEW PATIENTS<br/>
-                    <span>A $195 VALUE</span>
-                    </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="plus-div"></div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <a href="<?php bloginfo('template_url'); ?>/promotions/" class="promo-link">
-                    <div class="free">free
-                    </div>
-                    <div class="promo-text">
-                    IMPLANT CONSULTATION<br/>
-                    <span>$500 OFF TREATMENT</span>
-                    </div>
-                    </a>
-                </div>-->
             </div>
             <div class="row">
             <a href="<?php bloginfo('template_url'); ?>/contact-us/" alt="Contact Us" >
@@ -110,19 +85,6 @@
                 <div class="col-xs-12">
                     <div class="social-links social-links-bottom">
                             <?php get_template_part( 'partials/svg','declaration2'); ?>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-                    <div class="footer-links">
-                    <?php 
-                        wp_nav_menu( array(
-                        'theme_location' => 'Footer Menu',
-                        'depth'      => 1,
-                        'container'  => false,
-                        'menu_class' => 'footer-menu nav nav-pills nav-stacked',
-                        'fallback_cb'    => '__return_false')
-                        );
-                    ?>
                     </div>
                 </div>
             </div>

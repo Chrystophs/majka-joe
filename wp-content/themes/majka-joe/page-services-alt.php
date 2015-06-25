@@ -10,7 +10,7 @@ get_header(); ?>
                       <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
                       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                           <article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/WebPage">
-                            <header class="article-header">
+                            <header class="article-header box-content">
                                 <h1 class="service-title top-margin" itemprop="headline">
                                   <?php
                                     if(get_field('custom_page_headline_(h1)')) {
@@ -48,6 +48,11 @@ get_header(); ?>
 </div>
 <div class="body-bg">
   <div class="new-container">
+      <div class="row services-row center">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <?php the_content(); ?>
+                    </div>
+      </div>
         <?php
             $i = 1;
             $num_per_row = 1;
