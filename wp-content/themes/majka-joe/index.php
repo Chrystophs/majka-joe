@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div class="purple-bg" style="height:200px;"></div>
 <div class="body-bg">
     <div class="container">
         <div class="row">
